@@ -90,6 +90,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_providers_comun_service_.comunservice.html#actionsheetctrl" class="tsd-kind-icon">action<wbr>Sheet<wbr>Ctrl</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_providers_comun_service_.comunservice.html#alertctrl" class="tsd-kind-icon">alert<wbr>Ctrl</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_providers_comun_service_.comunservice.html#loadingctrl" class="tsd-kind-icon">loading<wbr>Ctrl</a></li>
 							</ul>
@@ -98,6 +99,8 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_providers_comun_service_.comunservice.html#datauritoblob" class="tsd-kind-icon">dataURIto<wbr>Blob</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_providers_comun_service_.comunservice.html#getimagecamaraorgalery" class="tsd-kind-icon">get<wbr>Image<wbr>Camara<wbr>OrGalery</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_providers_comun_service_.comunservice.html#gotogaleria" class="tsd-kind-icon">go<wbr>ToGaleria</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_providers_comun_service_.comunservice.html#showalert" class="tsd-kind-icon">show<wbr>Alert</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_providers_comun_service_.comunservice.html#showload" class="tsd-kind-icon">show<wbr>Load</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_providers_comun_service_.comunservice.html#takephoto" class="tsd-kind-icon">take<wbr>Photo</a></li>
@@ -112,13 +115,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Comun<wbr>Service<span class="tsd-signature-symbol">(</span>alertCtrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AlertController</span>, loadingCtrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LoadingController</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_providers_comun_service_.comunservice.html" class="tsd-signature-type">ComunService</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Comun<wbr>Service<span class="tsd-signature-symbol">(</span>alertCtrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AlertController</span>, loadingCtrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LoadingController</span>, actionSheetCtrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ActionSheetController</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_providers_comun_service_.comunservice.html" class="tsd-signature-type">ComunService</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in providers/comun-service.ts:16</li>
+									<li>Defined in <a href="https://github.com/ruedagato/baseIonic/blob/17a8572/src/providers/comun-service.ts#L17">providers/comun-service.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -129,6 +132,9 @@
 								<li>
 									<h5>loadingCtrl: <span class="tsd-signature-type">LoadingController</span></h5>
 								</li>
+								<li>
+									<h5>actionSheetCtrl: <span class="tsd-signature-type">ActionSheetController</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_providers_comun_service_.comunservice.html" class="tsd-signature-type">ComunService</a></h4>
 						</li>
@@ -138,12 +144,22 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="actionsheetctrl" class="tsd-anchor"></a>
+					<h3>action<wbr>Sheet<wbr>Ctrl</h3>
+					<div class="tsd-signature tsd-kind-icon">action<wbr>Sheet<wbr>Ctrl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ActionSheetController</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ruedagato/baseIonic/blob/17a8572/src/providers/comun-service.ts#L26">providers/comun-service.ts:26</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="alertctrl" class="tsd-anchor"></a>
 					<h3>alert<wbr>Ctrl</h3>
 					<div class="tsd-signature tsd-kind-icon">alert<wbr>Ctrl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AlertController</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in providers/comun-service.ts:25</li>
+							<li>Defined in <a href="https://github.com/ruedagato/baseIonic/blob/17a8572/src/providers/comun-service.ts#L26">providers/comun-service.ts:26</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -153,7 +169,7 @@
 					<div class="tsd-signature tsd-kind-icon">loading<wbr>Ctrl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">LoadingController</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in providers/comun-service.ts:25</li>
+							<li>Defined in <a href="https://github.com/ruedagato/baseIonic/blob/17a8572/src/providers/comun-service.ts#L26">providers/comun-service.ts:26</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -170,7 +186,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in providers/comun-service.ts:92</li>
+									<li>Defined in <a href="https://github.com/ruedagato/baseIonic/blob/17a8572/src/providers/comun-service.ts#L93">providers/comun-service.ts:93</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -197,6 +213,60 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getimagecamaraorgalery" class="tsd-anchor"></a>
+					<h3>get<wbr>Image<wbr>Camara<wbr>OrGalery</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Image<wbr>Camara<wbr>OrGalery<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ruedagato/baseIonic/blob/17a8572/src/providers/comun-service.ts#L108">providers/comun-service.ts:108</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get image from camara or galery</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>memberof</dt>
+									<dd><p>ComunService</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="gotogaleria" class="tsd-anchor"></a>
+					<h3>go<wbr>ToGaleria</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">go<wbr>ToGaleria<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ruedagato/baseIonic/blob/17a8572/src/providers/comun-service.ts#L142">providers/comun-service.ts:142</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get imgae from galery</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>memberof</dt>
+									<dd><p>ComunService</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="showalert" class="tsd-anchor"></a>
 					<h3>show<wbr>Alert</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -206,7 +276,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in providers/comun-service.ts:38</li>
+									<li>Defined in <a href="https://github.com/ruedagato/baseIonic/blob/17a8572/src/providers/comun-service.ts#L39">providers/comun-service.ts:39</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -242,7 +312,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in providers/comun-service.ts:54</li>
+									<li>Defined in <a href="https://github.com/ruedagato/baseIonic/blob/17a8572/src/providers/comun-service.ts#L55">providers/comun-service.ts:55</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -276,7 +346,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in providers/comun-service.ts:66</li>
+									<li>Defined in <a href="https://github.com/ruedagato/baseIonic/blob/17a8572/src/providers/comun-service.ts#L67">providers/comun-service.ts:67</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -338,6 +408,9 @@
 								<a href="_providers_comun_service_.comunservice.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_providers_comun_service_.comunservice.html#actionsheetctrl" class="tsd-kind-icon">action<wbr>Sheet<wbr>Ctrl</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_providers_comun_service_.comunservice.html#alertctrl" class="tsd-kind-icon">alert<wbr>Ctrl</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -345,6 +418,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_providers_comun_service_.comunservice.html#datauritoblob" class="tsd-kind-icon">dataURIto<wbr>Blob</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_providers_comun_service_.comunservice.html#getimagecamaraorgalery" class="tsd-kind-icon">get<wbr>Image<wbr>Camara<wbr>OrGalery</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_providers_comun_service_.comunservice.html#gotogaleria" class="tsd-kind-icon">go<wbr>ToGaleria</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_providers_comun_service_.comunservice.html#showalert" class="tsd-kind-icon">show<wbr>Alert</a>

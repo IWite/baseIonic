@@ -4,7 +4,7 @@
 import { Injectable } from '@angular/core';
 import { AlertController } from 'ionic-angular';
 import { LoadingController, Loading } from 'ionic-angular';
-import { ActionSheetController  } from 'ionic-angular';
+import { ActionSheetController } from 'ionic-angular';
 import 'rxjs/add/operator/map';
 // -----------------------------------------------------------------
 // Plug-in
@@ -100,45 +100,63 @@ export class ComunService {
     }
 
 
+    /**
+     * Get image from camara or galery
+     * @returns {Promise<any>} 
+     * @memberOf ComunService
+     */
+    getImageCamaraOrGalery():Promise<any> {
+        return new Promise((data,err) => {
+            let actionSheet = this.actionSheetCtrl.create({
+                title: '¿Desde dónde deseas agregar la foto?',
+                buttons: [
+                    {
+                        text: 'Cámara',
+                        handler: () => {
+                            this.takePhoto().then(dat => data(dat)).catch(error => err(err))
+                        }
+                    }, {
+                        text: 'Galería',
+                        handler: () => {
+                            this.goToGaleria().then(dat => data(dat)).catch(error => err(err))
+                        }
+                    }, {
+                        text: 'Cancel',
+                        role: 'cancel',
+                        handler: () => {
+                            data('Cancel')
+                        }
+                    }
+                ]
+            });
+            actionSheet.present();
+        })
 
-    actionSheet() {
-        let actionSheet = this.actionSheetCtrl.create({
-            title: '¿Desde dónde deseas agregar la foto?',
-            buttons: [
-                {
-                    text: 'Cámara',
-                    handler: () => {
-                        this.takePhoto()
-                    }
-                }, {
-                    text: 'Galería',
-                    handler: () => {
-                        this.goToGaleria()
-                    }
-                }, {
-                    text: 'Cancel',
-                    role: 'cancel',
-                    handler: () => {
-                        console.log('Cancel clicked');
-                    }
-                }
-            ]
-        });
-        actionSheet.present();
     }
+    
+    /**
+     * Get imgae from galery
+     * @returns {Promise<any>}
+     * @memberOf ComunService
+     */
+    goToGaleria(): Promise<any> {
+        return new Promise((data,error) => {
+            let cameraOptions = {
+                sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+                destinationType: Camera.DestinationType.DATA_URL,
+                quality: 100,
+                targetWidth: 1000,
+                targetHeight: 1000,
+                encodingType: Camera.EncodingType.JPEG,
+                correctOrientation: true
+            }
+            Camera.getPicture(cameraOptions).then((imageData) => {
+                let base64Image = 'data:image/jpeg;base64,' + imageData;
+                data(base64Image)
+            }, (err) => { 
+                error(err)
+            });
+        })
 
-    goToGaleria() {
-        let cameraOptions = {
-            sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
-            destinationType: Camera.DestinationType.DATA_URL,
-            quality: 100,
-            targetWidth: 1000,
-            targetHeight: 1000,
-            encodingType: Camera.EncodingType.JPEG,
-            correctOrientation: true
-        }
-        Camera.getPicture(cameraOptions).then((imageData) => {
-            let base64Image = 'data:image/jpeg;base64,' + imageData;
-        }, (err) => { });
     }
 }
