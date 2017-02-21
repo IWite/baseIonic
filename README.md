@@ -55,6 +55,8 @@ const config_dev = {
 }
 ```
 
-
-generate doc 
-npm run docs
+## Documentation
+For generate a file with web page documentation run:
+```
+$ npm run docs
+```
