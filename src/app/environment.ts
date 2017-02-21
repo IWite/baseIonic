@@ -1,16 +1,23 @@
-export const environment = {
-	firebase_dev: {
-		apiKey: '',
-		authDomain: '',
-		databaseURL: '',
-		storageBucket: '',
-		messagingSenderId: ''
-	},
-    firebase_pro: {
+const config_dev = {
+	firebaseConfig: {
 		apiKey: '',
 		authDomain: '',
 		databaseURL: '',
 		storageBucket: '',
 		messagingSenderId: ''
 	}
+
 }
+
+const config_prod = {
+	firebaseConfig: {
+		apiKey: '',
+		authDomain: '',
+		databaseURL: '',
+		storageBucket: '',
+		messagingSenderId: ''
+	}
+
+}
+
+export const environment = config_dev;

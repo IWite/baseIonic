@@ -39,7 +39,7 @@ export class MyApp {
 	constructor(public platform: Platform) {
 		this.initializeApp();
 		// inicializa el servicio de firebase
-		firebase.initializeApp(environment.firebase_dev)
+		firebase.initializeApp(environment.firebaseConfig)
 		// Estructura para navegar entre páginas
 		this.pages = [
 			{ title: 'Page One', component: Page1 },
