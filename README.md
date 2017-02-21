@@ -19,7 +19,8 @@ This is a templete with some ommon codes for general aplications, this include g
 	``` bash
 	$ git clone https://github.com/IWite/baseIonic.git
 	```
-2. Install dependencies
+  
+2. Install dependencies   
 	``` bash
 	$ npm install
 	```
