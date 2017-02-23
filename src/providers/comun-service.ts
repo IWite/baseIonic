@@ -124,7 +124,7 @@ export class ComunService {
                         text: 'Cancel',
                         role: 'cancel',
                         handler: () => {
-                            data('Cancel')
+                            err('Cancel')
                         }
                     }
                 ]

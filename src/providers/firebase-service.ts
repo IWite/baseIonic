@@ -17,9 +17,6 @@ export class FirebaseService {
 	// Atributos
 	// -----------------------------------------------------------------
 
-	/** Instance of User Firebase  */
-	user: firebase.User
-
 
 	// -----------------------------------------------------------------
 	// Constructor
@@ -40,8 +37,8 @@ export class FirebaseService {
 	 */
 	registerEmail(email: string, pass: string): Promise<any> {
 		return new Promise((result, err) => {
-			firebase.auth().createUserWithEmailAndPassword(email, pass).then(() => {
-				result()
+			firebase.auth().createUserWithEmailAndPassword(email, pass).then((user) => {
+				result(user)
 			}).catch((error: firebase.FirebaseError) => {
 				err(this.getErrorLogin(error))
 			})
@@ -59,8 +56,8 @@ export class FirebaseService {
 		return new Promise((result, err) => {
 			firebase.auth().signInWithEmailAndPassword(email, pass).then(() => {
 				result()
-			}).catch(error => {
-				err(error)
+			}).catch((error: firebase.FirebaseError) => {
+				err(this.getErrorLogin(error))
 			})
 		})
 	}
@@ -100,6 +97,9 @@ export class FirebaseService {
 			mensaje = 'La contraseña debe tener minimo 6 caracteres'
 		else if (error.code === 'auth/email-already-in-use')
 			mensaje = 'El correo ya esta en uso'
+		else if (error.code == 'auth/invalid-email') {
+			mensaje = 'Correo no valido'
+		}
 		else {
 			mensaje = error.message
 		}
@@ -116,13 +116,17 @@ export class FirebaseService {
 	 */
 	updateInfoUser(name: string, photo: string): Promise<any> {
 		return new Promise((res, err) => {
-			this.user.updateProfile({
-				displayName: name,
-				photoURL: photo
-			}).then(
-				() => res(),
-				error => err(err)
-				)
+			let user = firebase.auth().currentUser
+			if (!user)
+				err('User undefine')
+			else
+				user.updateProfile({
+					displayName: name,
+					photoURL: photo
+				}).then(
+					() => res(),
+					error => err(err)
+					)
 		})
 	}
 
