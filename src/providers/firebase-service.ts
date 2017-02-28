@@ -100,6 +100,8 @@ export class FirebaseService {
 		else if (error.code == 'auth/invalid-email') {
 			mensaje = 'Correo no valido'
 		}
+		else if(error.code == 'auth/wrong-password')
+			mensaje = 'La contraseña es inválida'
 		else {
 			mensaje = error.message
 		}
