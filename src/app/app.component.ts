@@ -4,7 +4,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-import { environment } from './environment';
 // -----------------------------------------------------------------
 // Pages
 // -----------------------------------------------------------------
@@ -15,6 +14,7 @@ import { Page2 } from '../pages/page2/page2';
 // -----------------------------------------------------------------
 import * as firebase from 'firebase';
 
+declare const ENV;
 
 
 
@@ -39,7 +39,7 @@ export class MyApp {
 	constructor(public platform: Platform) {
 		this.initializeApp();
 		// inicializa el servicio de firebase
-		firebase.initializeApp(environment.firebaseConfig)
+		firebase.initializeApp(ENV.data.firebase_config)
 		// Estructura para navegar entre páginas
 		this.pages = [
 			{ title: 'Page One', component: Page1 },
